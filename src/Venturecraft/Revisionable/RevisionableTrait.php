@@ -103,7 +103,7 @@ trait RevisionableTrait
     public static function classRevisionHistory($limit = 100, $order = 'desc')
     {
         return \Venturecraft\Revisionable\Revision::where('revisionable_type', get_called_class())
-            ->orderBy('updated_at', $order)->limit($limit)->get();
+            ->orderBy('id', $order)->limit($limit)->get();
     }
 
     /**
